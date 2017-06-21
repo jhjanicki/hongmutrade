@@ -202,7 +202,7 @@
         <br>
         <p>Only 8 out of 33 Hongmu species are protected under CITES.</p>
          <p class="orange"> Hover over circle to see species </p>
-         <!-- <p><span id="currentScrollTop"></span></p> -->
+         
       </div>
    
       <div class="panel">
@@ -215,6 +215,7 @@
       </div>
       
       <div class="panel">
+      
         <h3> Source Countries </h3>
         <p>Soaring demand for scarce hongmu resources has caused supply chains to expand from Southeast Asia to new frontiers in West Africa and Central America. Nearly half of the world’s countries (88 in total) across five continents have been targeted by traders since 2000.</p>
 	        <p class="bold">Africa</p>
@@ -232,9 +233,11 @@ leading hongmu-producing region by volume.</p>
 			</div>
 
 	    <br>
+	    
 	        <p class="bold">Asia</p>
 	        <p>Although the reported volume from Central America is relatively small, the region has <i>Dalbergia</i> species with very limited distributions that are particularly vulnerable to commercial extinction.</p>
 	    <br>
+	    <!-- <p><span id="currentScrollTop"></span></p> -->
 	        <p class="bold">Latin America</p>
 	      	<p>With the commercial extinction of Huang Hua Li <i>Dalbergia odorifera</i> in China and heavy restrictions placed on the harvest and export of CITES-listed Red Sandalwood <i>Pterocarpus santialinus</i> in India, Siamese Rosewood <i>Dalbergia cochinchinensis</i> became the most sought-after hongmu species globally</p>
       </div>
@@ -256,6 +259,7 @@ Appendix III to Appendix II.</p>
  
   <script>
   
+  console.log(window.innerWidth);
 
 	// set up svg and scrolling
     var width = window.innerWidth / 2
@@ -308,9 +312,11 @@ Appendix III to Appendix II.</p>
         
         /* console.log(scrollTop); */
 	       	
-	       	
-	    //scroll statements
-	       	if(scrollTop >= 350){
+	    //scroll statements		 
+
+	   if(window.innerWidth <=1350){
+		 	console.log(scrollTop);
+		     if(scrollTop >= 350){
 		         d3.selectAll(".title")
 		    		.transition()
 		    		.duration(100)
@@ -490,7 +496,7 @@ Appendix III to Appendix II.</p>
 	        }
 	        
 	        
-	        if(scrollTop >= 2500 && scrollTop <=3100){
+	        if(scrollTop >= 2550 && scrollTop <=2950){
 		       d3.selectAll("path.africancountries")
 		    		.transition()
 		    		.duration(100)
@@ -515,7 +521,7 @@ Appendix III to Appendix II.</p>
 		    
 	        }
 	        
-	        if(scrollTop >= 3100 && scrollTop <=3500){
+	        if(scrollTop >= 3000 && scrollTop <=3450){
 		       d3.selectAll("path.asiancountries")
 		    		.transition()
 		    		.duration(100)
@@ -541,7 +547,7 @@ Appendix III to Appendix II.</p>
 	        }
 	        
 	        
-	        if(scrollTop >= 3500 && scrollTop <=3800){
+	        if(scrollTop >= 3450 && scrollTop <=3750){
 		       d3.selectAll("path.latincountries")
 		    		.transition()
 		    		.duration(100)
@@ -566,7 +572,271 @@ Appendix III to Appendix II.</p>
 		    
 	        }
 	        
+	     }else{
+		     
+		     
+		     
+	   	     if(scrollTop >= 450){
+		         d3.selectAll(".title")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		         
+	         }else{
+		         d3.selectAll(".title")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+	         }	    
+	         
+	         
 	        
+	         if(scrollTop >= 450 && scrollTop <=650){
+	         	 d3.selectAll(".stat1")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    	
+	         }else{
+		          d3.selectAll(".stat1")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		           
+	         }
+	         
+	         if(scrollTop >= 650 && scrollTop <=850){
+	         	 d3.selectAll(".stat2")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    	
+	         }else{
+		          d3.selectAll(".stat2")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		           
+	         }
+	         
+		    if(scrollTop >= 850 && scrollTop <=1050){
+	         	 d3.selectAll(".stat3")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    	
+		    	d3.selectAll(".stat3-1")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    	
+	         }else{
+		          d3.selectAll(".stat3")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    	
+		    	d3.selectAll(".stat3-1")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    	  
+		    	  
+		           
+	         }
+	         
+	         if(scrollTop >= 1050 && scrollTop <=1250){
+	         	 d3.selectAll(".stat4")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    	
+	         }else{
+		          d3.selectAll(".stat4")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		           
+	         }
+
+
+	         
+	         
+	         if(scrollTop >= 700){
+		    	 d3.selectAll(".horizontalGrid")
+		    	 .transition()
+		         .duration(200)
+		    	 .style('opacity',0);
+		    	 
+		    	 d3.selectAll(".axis")
+		         .transition()
+		         .duration(200)
+		    	 .style('opacity',0);
+		         
+	         }else{
+
+		         d3.selectAll(".horizontalGrid")
+		         .transition()
+		         .duration(200)
+		    	 .style('opacity',1);
+		         
+		    	 d3.selectAll(".axis")
+		         .transition()
+		         .duration(200)
+		    	 .style('opacity',1);
+		         
+	         }
+	         
+	         
+	        if(scrollTop >= 1400 && scrollTop <=1900){
+	          d3.selectAll(".circle")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    		
+		    	d3.selectAll(".invisRect").remove();
+		    	
+		    	d3.selectAll(".stat5")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+	        
+	        
+	        
+	        
+	        }else{
+		         
+		        d3.selectAll(".circle")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    	
+		    	svg.append("rect")
+  				.attr("class","invisRect")  
+  				.attr("x", 0)
+  				.attr("y", 0)                                  
+		        .attr("width", width)
+                .attr("height", height)
+                .attr("fill","transparent");
+                
+                d3.selectAll(".stat5")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+	        } 
+	         
+	    
+	         if(scrollTop >= 1850){
+		         d3.selectAll("path.line")
+		    		.style('opacity',0);
+
+		         
+	         }else{
+		         
+		         d3.selectAll("path.line")
+		    		.style('opacity',1);
+	         }
+	        
+	        if(scrollTop >= 2000 && scrollTop <=2500){
+		       d3.selectAll("path.china")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    		
+		    	
+	        }else{
+
+		        d3.selectAll("path.china")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+
+		        
+		    
+	        }
+	        
+	        
+	        if(scrollTop >= 2750 && scrollTop <=3400){
+		       d3.selectAll("path.africancountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		       d3.selectAll("path.bgcountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    		
+		    	
+	        }else{
+		        
+		        d3.selectAll("path.africancountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    		
+		    	d3.selectAll("path.bgcountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    
+	        }
+	        
+	        if(scrollTop >= 3400 && scrollTop <=3900){
+		       d3.selectAll("path.asiancountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		       d3.selectAll("path.bgcountries2")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    		
+		    	
+	        }else{
+
+		        d3.selectAll("path.asiancountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    		
+		    	d3.selectAll("path.bgcountries2")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    
+	        }
+	        
+	        
+	        if(scrollTop >= 3900 && scrollTop <=4300){
+		       d3.selectAll("path.latincountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		       d3.selectAll("path.bgcountries3")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',1);
+		    		
+		    	
+	        }else{
+
+		        d3.selectAll("path.latincountries")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    		
+		    	d3.selectAll("path.bgcountries3")
+		    		.transition()
+		    		.duration(100)
+		    		.style('opacity',0);
+		    
+	        }
+	       
+		     
+		     
+	     }
+		     
+
 
 	        
 	         
